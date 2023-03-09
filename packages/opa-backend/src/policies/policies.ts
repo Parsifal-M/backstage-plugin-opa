@@ -3,7 +3,7 @@ import { PolicyQuery } from '@backstage/plugin-permission-node';
 import { OpaClient } from '../opa-client/opaClient';
 import { AuthorizeResult } from '@backstage/plugin-permission-common';
 
-export async function enforceMyCustomPolicy(opaClient: OpaClient) {
+export async function cannotDeleteEntities(opaClient: OpaClient) {
   return async (request: PolicyQuery): Promise<PolicyDecision> => {
     // Check if the requested action is to remove a catalog entity
     if (request.permission.name === 'catalog.entity.delete') {
