@@ -1,15 +1,22 @@
 {
   "name": "@parsifal-m/plugin-opa-auth-backend",
-  "version": "1.0.0-alpha.2",
-  "main": "dist/index.cjs.js",
-  "types": "dist/index.d.ts",
+  "version": "1.0.0-alpha.3",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "license": "Apache-2.0",
   "private": false,
   "publishConfig": {
     "access": "public",
-    "main": "dist/index.cjs.js",
+    "main": "dist/index.esm.js",
     "types": "dist/index.d.ts"
   },
+  "keywords": [
+    "backstage",
+    "opa",
+    "authorization",
+    "backend",
+    "permissions"
+],
   "backstage": {
     "role": "backend-plugin"
   },
@@ -36,6 +43,7 @@
   },
   "devDependencies": {
     "@backstage/cli": "^0.22.2",
+    "@types/node-fetch": "^2.6.2",
     "@types/supertest": "^2.0.12",
     "msw": "^0.49.0",
     "supertest": "^6.2.4"
